@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6d365;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 20px;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input,
+.todo-button {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background: white;
+}
+
+.todo-button {
+  color: #d88771;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-button:hover {
+  background-color: #d88771;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 5px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo-item {
+  /* pushing the buttons together */
+  flex: 1;
+
+  /* 0 on the right and 5 on the left */
+  padding: 0 5px;
+}
+
+.trash-btn,
+.complete-btn {
+  cursor: pointer;
+  border: none;
+  background-color: #d88771;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+.complete-btn {
+  background-color: rgb(63, 168, 63);
+}
+
+/* i dont want to click on the icon  */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(5px) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-apperance: none;
+  -moz-apperance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #ff6f47;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: none;
+  text-align: center;
+}
+
+.select {
+  margin: 5px;
+  position: relative;
+  /* what should happen if content overflows an element's box. */
+  overflow: hidden;
+}
